@@ -1,0 +1,17 @@
+{
+  "name": "fruit-basket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "load-contents": "node load_content.js",
+    "fruit-basket": "node fruitBasketProblem.js",
+    "test": "node_modules/.bin/mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2"
+  }
+}
