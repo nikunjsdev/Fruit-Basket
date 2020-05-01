@@ -1,0 +1,57 @@
+1. Explain the difference between an abstract class and an interface.
+- abstract class contains variables and one or more abstract methods within it
+  whereas, in the interface , it has fully abstract methods only without anybody
+- abstract classes should be used primarily for objects that are closely related,
+  whereas interfaces are best suited for providing common functionality to unrelated classes
+
+2. What is the purpose of getters and setters in a class
+-  The purpose of getters and setters in a class is to protect our class variable.
+   by creating getter and setterwe can control how our essential variables should be accessed and updated.
+
+3. Explain the purpose of black-box testing
+-  The main purpose of black-box testing is to check the application under test from the user's perspective.
+-  This testing approach focuses on the input that goes into the software, and the output that is produced
+-  Black box testing is based on the requirements and checks the system to validate against predefined requirements.
+
+4. In your opinion what are the benefits of test cases
+-  In my opinion, there are lot's of the benefits of writing test cases for each and every line we code
+-  by writing test cases of each and every line with success/failure scenarios, we can produce unknown bugs
+   and at the end we sure that our code is 100% correct
+-  we can improve the quality of our system/software
+-  it helps us to verify that our software meets the end-user requirements.
+-  it also decreases the maintenance and software support costs
+
+5. What is an error first callback, and what is the reason for this pattern exist?
+-  The first argument to callback functions is an error object and the subsequent arguments
+   represent associated data that's why it called error first callback. we use a callback function
+   to perform an asynchronous function and there can be many asynchronous functions we are calling to
+   achieve our functionality to work. so if we have an error in any of function then we can check the
+   first parameter(which is an error object) to decide whether we should move to the next function or
+   there is an error so we can stop our execution, if everything goes well then we can go ahead.
+   according to me, this is the main reason for this existing pattern
+
+6. Explain the difference between fs.readSync and fs.read (File System module in Nodejs)
+- File system module of nodejs provides two kinds of function to play with file system
+- The fs.read() is used to read file asynchronously whereas fs.readSync is used to read file synchronously
+  means that we need to pass callback function if we are using fs.read to read a file to get the proper
+  result see (a). and if we are using fs.readSync then we don't need to pass any callback function it
+  will directly return the result see (b).
+
+ (a):
+
+   fs.readFile('file.txt', function(err, data) {
+      if (err) return callback(err);
+
+     // If succeeded, print the contents.
+     console.log(data);
+   });
+
+ (b):
+
+   const data = fs.readFileSync('test.txt', "utf8");
+   console.log(data);
+
+7. What tasks do you feel should be done asynchronously?
+- in simple words, any task/function that needs to wait for something else to happen before
+  it can execute that needs to done asynchronously. like I have one function which depends on the
+  result of another function that it needs to done asynchronously.
